@@ -1,0 +1,76 @@
+.#{$icomoon-prefix}-menu { 
+  &:before {
+    content: $icon-menu;
+  }
+}
+.#{$icomoon-prefix}-user { 
+  &:before {
+    content: $icon-user;
+  }
+}
+.#{$icomoon-prefix}-close { 
+  &:before {
+    content: $icon-close;
+  }
+}
+.#{$icomoon-prefix}-shopping-cart { 
+  &:before {
+    content: $icon-shopping-cart;
+  }
+}
+.#{$icomoon-prefix}-eye { 
+  &:before {
+    content: $icon-eye;
+  }
+}
+.#{$icomoon-prefix}-angle-down { 
+  &:before {
+    content: $icon-angle-down;
+  }
+}
+.#{$icomoon-prefix}-angle-up { 
+  &:before {
+    content: $icon-angle-up;
+  }
+}
+.#{$icomoon-prefix}-angle-right { 
+  &:before {
+    content: $icon-angle-right;
+  }
+}
+.#{$icomoon-prefix}-angle-left { 
+  &:before {
+    content: $icon-angle-left;
+  }
+}
+.#{$icomoon-prefix}-image { 
+  &:before {
+    content: $icon-image;
+  }
+}
+.#{$icomoon-prefix}-trash { 
+  &:before {
+    content: $icon-trash;
+  }
+}
+.#{$icomoon-prefix}-sign-out { 
+  &:before {
+    content: $icon-sign-out;
+  }
+}
+.#{$icomoon-prefix}-paper-plane { 
+  &:before {
+    content: $icon-paper-plane;
+  }
+}
+.#{$icomoon-prefix}-check { 
+  &:before {
+    content: $icon-check;
+  }
+}
+.#{$icomoon-prefix}-bitcoin-ticket { 
+  &:before {
+    content: $icon-bitcoin-ticket;
+  }
+}
+

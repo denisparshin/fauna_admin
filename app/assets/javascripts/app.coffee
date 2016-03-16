@@ -1,0 +1,28 @@
+//= require ./core/core
+//= require ./auth/auth
+
+angular.module "app", [
+  "ngRoute"
+  "templates"
+  "Devise"
+  "ngSanitize"
+  "ngFileUpload"
+  "pascalprecht.translate"
+  "mgcrea.ngStrap.core"
+  "mgcrea.ngStrap.helpers.dimensions"
+  "mgcrea.ngStrap.modal"
+  "mgcrea.ngStrap.tooltip"
+  "mgcrea.ngStrap.helpers.dateParser"
+  "mgcrea.ngStrap.helpers.dateFormatter"
+  "mgcrea.ngStrap.datepicker"
+  "monospaced.qrcode"
+  "app.core"
+  "app.auth"
+]
+
+angular.module "app"
+  .config [ "$translateProvider", ($translateProvider) ->
+    $translateProvider.preferredLanguage(I18n.locale);
+    $translateProvider.useSanitizeValueStrategy "sanitize"
+    $translateProvider.translations I18n.locale, I18n.translations[I18n.locale]
+  ]
