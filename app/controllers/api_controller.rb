@@ -9,18 +9,18 @@ class ApiController < ApplicationController
   include ApiHelper
   
   def index
-    respond_with loaded_resources.page(params[:page]).per(ENV["PER_PAGE"])
+    render json: {symbol_params_many => serialize_objects(loaded_resources.page(params[:page]).per(ENV["PER_PAGE"]), serializer_name)}
   end
 
   def show
-    respond_with loaded_resource
+    render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name)}
   end
 
   def destroy
     if loaded_resource.delete
       render json: {id: params[:id]}
     else
-      render json: {error: I18n.t("info.something_went_wrong") }
+      render_error
     end
   end
 
@@ -29,8 +29,14 @@ class ApiController < ApplicationController
     if resource.save
       render json: {symbol_params_one => serialize_object(resource, serializer_name)}
     else
-      render json: {error: I18n.t("info.something_went_wrong") }
+      render_error
     end
+  end
+
+  private
+
+  def render_error
+    render json: {error: I18n.t("info.something_went_wrong") }
   end
 
 end
