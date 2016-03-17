@@ -9,11 +9,11 @@ class ApiController < ApplicationController
   include ControllerApi
   
   def index
-    render json: {symbol_params_many => serialize_objects(loaded_resources.page(params[:page]).per(ENV["PER_PAGE"]), serializer_name, {action: :index})}
+    render json: {symbol_params_many => serialize_objects(loaded_resources.page(params[:page]).per(ENV["PER_PAGE"]), serializer_name, {template: :index})}
   end
 
   def show
-    render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name, {action: :show})}
+    render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name, {template: :show})}
   end
 
   def destroy
@@ -27,7 +27,7 @@ class ApiController < ApplicationController
   def create
     resource = loaded_class.new permited_params
     if resource.save
-      render json: {symbol_params_one => serialize_object(resource, serializer_name, {action: :create})}
+      render json: {symbol_params_one => serialize_object(resource, serializer_name, {template: :create})}
     else
       render_error
     end
