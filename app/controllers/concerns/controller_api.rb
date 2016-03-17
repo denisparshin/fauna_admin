@@ -1,4 +1,5 @@
-module ApiHelper
+module ControllerApi
+  extend ActiveSupport::Concern
 
   def permited_params
     params.require(symbol_params_one).permit(to_permit)

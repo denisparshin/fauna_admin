@@ -5,15 +5,15 @@ class ApiController < ApplicationController
 
   skip_before_action :verify_authenticity_token if Rails.env == "development"
 
-  include SerializeHelper
-  include ApiHelper
+  include SerializerApi
+  include ControllerApi
   
   def index
-    render json: {symbol_params_many => serialize_objects(loaded_resources.page(params[:page]).per(ENV["PER_PAGE"]), serializer_name)}
+    render json: {symbol_params_many => serialize_objects(loaded_resources.page(params[:page]).per(ENV["PER_PAGE"]), serializer_name, {action: :index})}
   end
 
   def show
-    render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name)}
+    render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name, {action: :show})}
   end
 
   def destroy
@@ -27,7 +27,7 @@ class ApiController < ApplicationController
   def create
     resource = loaded_class.new permited_params
     if resource.save
-      render json: {symbol_params_one => serialize_object(resource, serializer_name)}
+      render json: {symbol_params_one => serialize_object(resource, serializer_name, {action: :create})}
     else
       render_error
     end
