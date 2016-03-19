@@ -1,0 +1,5 @@
+.clearfix
+  .clearfix(ng-repeat="product in products track by product.id")
+    %a(ng-href='/#/products/{{::product.id}}') 
+      {{::product.name}}
+  %pagination(page="page" items-count="count" per-page="per")

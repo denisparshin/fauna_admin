@@ -1,5 +1,7 @@
 //= require ./core/core
 //= require ./auth/auth
+//= require ./products/products
+//= require ./shared/shared
 
 angular.module "app", [
   "ngRoute"
@@ -18,6 +20,8 @@ angular.module "app", [
   "monospaced.qrcode"
   "app.core"
   "app.auth"
+  "app.products"
+  "app.shared"
 ]
 
 angular.module "app"
