@@ -2,11 +2,11 @@ paginationDirective = ->
   restrict: "E"
   replace: true
   scope:
-    perPage: "="
-    itemsCount: "="
+    per: "="
+    count: "="
     page: "="
   templateUrl: "shared/pagination.html"
-  controller: ["$scope", "$location", ($scope, $location) ->
+  controller: ["$scope", "$location", "$routeParams", ($scope, $location, $routeParams) ->
     calculatePages = ->
       buf = []
       o = 0
@@ -22,12 +22,14 @@ paginationDirective = ->
     updatePager = ->
       $scope.params = _.map(_.without(_.keys($location.search()), "page"), (e) -> "#{e}=#{$location.search()[e]}").join("&")
       $scope.path = $location.path()
-      $scope.pagesAmount = Math.ceil $scope.itemsCount / $scope.perPage
+      $scope.pagesAmount = Math.ceil $scope.count / $scope.per
       $scope.viewPages = calculatePages()
+      if $routeParams.page && parseInt($routeParams.page) > $scope.pagesAmount
+        $location.search $.extend(_.omit($location.search(), "page"), {page: $scope.pagesAmount})
 
 
     $scope.page = 1 unless $scope.page
-    $scope.$watch "itemsCount", -> updatePager()
+    $scope.$watch "count", -> updatePager()
     $scope.$watch "page", -> updatePager()
 
 

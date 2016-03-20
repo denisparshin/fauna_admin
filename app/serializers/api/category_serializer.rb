@@ -2,7 +2,7 @@ class Api::CategorySerializer < ApiSerializer
   attributes :id
 
   def index 
-    [:name, :xoxoxo]
+    [:name]
   end
 
   def show

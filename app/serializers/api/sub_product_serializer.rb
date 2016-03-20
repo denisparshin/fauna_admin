@@ -2,6 +2,6 @@ class Api::SubProductSerializer < ApiSerializer
   attributes :id
 
   def in_products
-    [:price]
+    [:price, :sku, :name]
   end
 end

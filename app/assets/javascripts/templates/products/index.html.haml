@@ -1,5 +1,21 @@
 .clearfix
-  .clearfix(ng-repeat="product in products track by product.id")
-    %a(ng-href='/#/products/{{::product.id}}') 
-      {{::product.name}}
-  %pagination(page="page" items-count="count" per-page="per")
+  .gtr-b-sm(ng-repeat="product in products track by product.id" product-item)
+    .box-tickets.bg-white
+      .gtr-hor-sm.gtr-ver-sm
+        .row
+          .tbl
+            .tbl-cell.cell-2.align-top.gtr-hor
+              %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}') 
+                %img.cell-12(ng-src="{{product.pictures[0]}}")
+            .tbl-cell.cell-4.align-top.gtr-hor
+              %a(ng-href='/#/products/{{::product.id}}') 
+                {{::product.name}}
+            .tbl-cell.cell-4.align-top.gtr-hor
+              .gtr-b-sm.text-sm(ng-repeat="sub in product.sub_products track by sub.id")
+                %b {{::sub.name}}
+            .tbl-cell.cell-2.align-bottom.gtr-hor.text-right
+              %button.btn.btn-danger(type="button" 
+                ng-click="removeProduct(product.id, $index)" 
+                confirm="{{::'js.products.confirm_remove' | translate}}")=icon :trash
+
+  %pagination(page="page" count="count" per="per")

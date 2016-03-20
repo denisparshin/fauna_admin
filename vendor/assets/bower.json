@@ -9,6 +9,7 @@
     "angular-sanitize": "latest",
     "ng-file-upload": "latest",
     "underscore": "latest",
-    "angular-qrcode": "latest"
+    "angular-qrcode": "latest",
+    "angular-confirm-modal": "latest"
   }
 }

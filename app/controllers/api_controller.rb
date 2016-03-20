@@ -9,7 +9,7 @@ class ApiController < ApplicationController
   include ControllerApi
   
   def index
-    data = loaded_resources()
+    data = loaded_resources(:index)
     params[:page] ||= 1
     count = data.count
     resources = data.page(params[:page]).per(ENV["PER_PAGE"])
@@ -26,7 +26,7 @@ class ApiController < ApplicationController
   end
 
   def destroy
-    if loaded_resource.delete
+    if loaded_resource.destroy
       render json: {id: params[:id]}
     else
       render_error
