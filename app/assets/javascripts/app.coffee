@@ -24,6 +24,10 @@ angular.module "app", [
   "app.shared"
 ]
 
+I18n.defaultLocale = "ru-ua"
+I18n.locale = "ru-ua";
+I18n.currentLocale()
+
 angular.module "app"
   .config [ "$translateProvider", ($translateProvider) ->
     $translateProvider.preferredLanguage(I18n.locale);

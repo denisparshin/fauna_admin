@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 module Colaapp
   class Application < Rails::Application
     env_filename = File.exist?(Rails.root.join(".env.#{Rails.env}")) ? ".env.#{Rails.env}" : ".env"
+    config.i18n.available_locales = ["ru-ua", "en"]
+    config.i18n.default_locale = "ru-ua"
     Dotenv.load Rails.root.join(env_filename)
     config.autoload_paths << Rails.root.join('services')
     config.active_record.raise_in_transactional_callbacks = true

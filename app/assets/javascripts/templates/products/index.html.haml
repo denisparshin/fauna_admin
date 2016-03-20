@@ -4,15 +4,17 @@
       .gtr-hor-sm.gtr-ver-sm
         .row
           .tbl
-            .tbl-cell.cell-2.align-top.gtr-hor
+            .tbl-cell.cell-3.align-top.gtr-hor
               %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}') 
                 %img.cell-12(ng-src="{{product.pictures[0]}}")
-            .tbl-cell.cell-4.align-top.gtr-hor
-              %a(ng-href='/#/products/{{::product.id}}') 
-                {{::product.name}}
-            .tbl-cell.cell-4.align-top.gtr-hor
+            .tbl-cell.cell-7.align-top.gtr-hor
+              .text-md.text-line
+                %a(ng-href='/#/products/{{::product.id}}') 
+                  {{::product.name}}
               .gtr-b-sm.text-sm(ng-repeat="sub in product.sub_products track by sub.id")
-                %b {{::sub.name}}
+                .smile.label.label-default.align-middle {{sub.sku}}
+                .smile.align-middle(ng-bind-html="sub.name")
+                %i.smile.align-middle.color-green ({{sub.price | currency}})
             .tbl-cell.cell-2.align-bottom.gtr-hor.text-right
               %button.btn.btn-danger(type="button" 
                 ng-click="removeProduct(product.id, $index)" 

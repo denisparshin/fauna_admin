@@ -22,4 +22,5 @@
 //= require angular-qrcode/angular-qrcode
 //= require_tree ./templates
 //= require modules/modules
+//= require angular-locale_ru-ua
 //= require app
