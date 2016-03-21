@@ -6,5 +6,5 @@
       .modal-body
         {{confirm}}
       .modal-footer.bg-light
-        %button.btn.btn-default(ng-click="$hide()") Cancel
-        %button.btn.btn-danger(ng-click="confirmClick()") Submit
+        %button.btn.btn-default(ng-click="$hide()") {{::"js.helpers.cancel" | translate}}
+        %button.btn.btn-danger(ng-click="confirmClick()") {{::"js.helpers.confirm" | translate}}

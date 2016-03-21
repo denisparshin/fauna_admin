@@ -19,7 +19,11 @@ module ControllerApi
 
   def loaded_resources(scope=nil)
     res = instance_variable_get("@" + symbol_params_many.to_s)
-    res.send(scope) if loaded_class.respond_to?(scope.to_s, true)
+    if loaded_class.respond_to?(scope.to_s, true)
+      res.send(scope) 
+    else
+      res
+    end
   end
 
   def symbol_params_one

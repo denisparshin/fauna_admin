@@ -1,8 +1,12 @@
 class Api::CategorySerializer < ApiSerializer
-  attributes :id
+  attributes :id, :name, :slug
 
-  def index 
-    [:name]
+  def in_products
+    [:catalog]
+  end
+
+  def catalog
+    serialize_object(object.catalog, Api::CatalogSerializer, {scope: :in_category})
   end
 
   def show

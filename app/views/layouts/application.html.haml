@@ -11,14 +11,10 @@
       .header
       .tbl
         .sidebar
-          .clearfix.text-center.text-lg.head-lg.gtr-t
-            %a.link-base(href='/#/')= icon :angle_down
           .gtr-hor.gtr-ver.font-light
             %a.sidebar-link(href='/#/catalogs') {{::"js.catalogs.title" | translate}}
             %a.sidebar-link(href='/#/categories') {{::"js.categories.title" | translate}}
             %a.sidebar-link(href='/#/products') {{::"js.products.title" | translate}}
-
-
         .tbl-cell(ng-class="alignMiddle ? 'align-middle' : 'align-top'" style="overflow: auto;")
           .tbl(ng-show="$root.waiting || !$root.ready" spinner)
           %span.content(ng-show="!$parent.waiting")

@@ -2,11 +2,15 @@ class Api::ProductSerializer < ApiSerializer
   attributes :id
 
   def index 
-    [:id, :name, :sub_products, :pictures]
+    [:id, :name, :sub_products, :pictures, :catalog, :category]
   end
 
   def show
     [:id, :name, :slug]
+  end
+
+  def category
+    serialize_object object.category, Api::CategorySerializer, {scope: :in_products}
   end
 
   def sub_products

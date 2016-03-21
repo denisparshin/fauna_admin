@@ -8,7 +8,11 @@
               %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}') 
                 %img.cell-12(ng-src="{{product.pictures[0]}}")
             .tbl-cell.cell-7.align-top.gtr-hor
-              .text-md.text-line
+              .text-line
+                %a(ng-href='/#/catalogs/{{::product.category.catalog.id}}') {{::product.category.catalog.name}}
+                \/
+                %a(ng-href='/#/categories/{{::product.category.id}}') {{::product.category.name}}
+                \/
                 %a(ng-href='/#/products/{{::product.id}}') 
                   {{::product.name}}
               .gtr-b-sm.text-sm(ng-repeat="sub in product.sub_products track by sub.id")

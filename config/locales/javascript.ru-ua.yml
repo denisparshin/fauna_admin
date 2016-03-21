@@ -2,5 +2,12 @@ ru-ua:
   js:
     helpers:
       are_you_sure: "Вы уверены?"
+      cancel: "Отменить"
+      confirm: "Согласен"
+    categories:
+      title: "Категории"
+    catalogs:
+      title: "Каталоги"
     products:
+      title: "Товары"
       confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"

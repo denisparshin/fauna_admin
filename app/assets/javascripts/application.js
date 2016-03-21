@@ -14,7 +14,7 @@
 //= require angular-strap/dist/modules/modal
 //= require angular-strap/dist/modules/tooltip
 //= require angular-strap/dist/modules/datepicker
-//= require angular-sanitize/angular-sanitize
+//= require angular-sanitize
 //= require ng-file-upload/ng-file-upload-all
 //= require angular-strap/dist/modules/datepicker.tpl
 //= require angular-translate/angular-translate

@@ -9,16 +9,20 @@ class ApiController < ApplicationController
   include ControllerApi
   
   def index
-    data = loaded_resources(:index)
-    params[:page] ||= 1
-    count = data.count
-    resources = data.page(params[:page]).per(ENV["PER_PAGE"])
-    render json: {
-      count: count, 
-      per: ENV["PER_PAGE"], 
-      page: params[:page], 
-      symbol_params_many => serialize_objects(resources, serializer_name, {scope: :index})
-    }
+    if params[:showall]
+      render json: { symbol_params_many => loaded_resources(:index) }
+    else
+      data = loaded_resources(:index)
+      params[:page] ||= 1
+      count = data.count
+      resources = data.page(params[:page]).per(ENV["PER_PAGE"])
+      render json: {
+        count: count, 
+        per: ENV["PER_PAGE"], 
+        page: params[:page], 
+        symbol_params_many => serialize_objects(resources, serializer_name, {scope: :index})
+      }
+    end
   end
 
   def show
