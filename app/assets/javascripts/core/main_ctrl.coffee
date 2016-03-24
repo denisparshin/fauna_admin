@@ -1,23 +1,23 @@
 controller = ($scope, Auth, $location, $rootScope, $route) ->
   $rootScope.ready = false
   redirectToLogin = ->
-    $location.path '/' 
+    $location.path '/sign_in' 
     $scope.apply() unless $scope.$$phase
     $route.reload()
 
   if window.anonimusUser
-    redirectToLogin()
     $rootScope.ready = true
     $scope.isAuthenticated = false
     $rootScope.user = null
     $scope.currentUser = null
+    redirectToLogin()
   else
     Auth.currentUser().then ((response) ->
       $scope.isAuthenticated = true
       $rootScope.ready = true
       $rootScope.user = response.user
       if !response.user.id
-        redirectToLogin() unless $location.path() == "/"
+        redirectToLogin() unless $location.path() == "/sign_in"
     ), (error) ->
       $rootScope.ready = true
   $scope.$apply() unless $scope.$$phase
@@ -25,7 +25,7 @@ controller = ($scope, Auth, $location, $rootScope, $route) ->
   $scope.logout = ->
     Auth.logout().then ((oldUser) ->
       $rootScope.user = undefined
-      $location.path '/'
+      $location.path '/sign_in'
       $route.reload()
       App.Alert.show "info", I18n.t("js.users.signed_out")
     ), (error) ->

@@ -6,10 +6,9 @@
     "angular-route": "latest",
     "angular-devise": "latest",
     "angular-translate": "latest",
-    "angular-sanitize": "latest",
     "ng-file-upload": "latest",
     "underscore": "latest",
     "angular-qrcode": "latest",
-    "angular-confirm-modal": "latest"
+    "angular-summernote": "latest"
   }
 }

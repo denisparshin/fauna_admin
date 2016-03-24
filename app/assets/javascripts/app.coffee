@@ -18,6 +18,7 @@ angular.module "app", [
   "mgcrea.ngStrap.helpers.dateFormatter"
   "mgcrea.ngStrap.datepicker"
   "monospaced.qrcode"
+  "summernote"
   "app.core"
   "app.auth"
   "app.products"

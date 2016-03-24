@@ -22,8 +22,8 @@
   @index = (path, data, success) ->
     $.ajax(ajax(path, "GET", data)).done(success).fail(fail)
 
-  @update = (path, data, success) ->
-    $.ajax(ajax(path, "PATCH", data)).done(success).fail(fail)
+  @update = (path, id, data, success) ->
+    $.ajax(ajax("#{path}/#{id}", "PATCH", data)).done(success).fail(fail)
 
   @remove = (path, id, success) ->
     $.ajax(ajax("#{path}/#{id}", "DELETE", "")).done(success).fail(fail)

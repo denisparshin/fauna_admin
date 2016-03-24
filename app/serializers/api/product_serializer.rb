@@ -12,13 +12,17 @@ class Api::ProductSerializer < ApiSerializer
       :metatag_id, 
       :slug, 
       :slider,
-      :metatag,
+      :metatag_attributes,
       :to_edit,
     ] 
   end
 
-  def metatag
-    serialize_object object.metatag, Api::MetatagSerializer, {scope: :in_product}
+  def metatag_attributes
+    if object.metatag
+      serialize_object object.metatag, Api::MetatagSerializer, {scope: :in_product}
+    else
+      {keywords: nil, description: nil}
+    end
   end
 
   def slider

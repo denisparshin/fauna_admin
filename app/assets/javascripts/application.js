@@ -22,5 +22,10 @@
 //= require angular-qrcode/angular-qrcode
 //= require_tree ./templates
 //= require modules/modules
+//= require bootstrap/tooltip
+//= require bootstrap/modal
+//= require summernote
+//= require angular-summernote/src/angular-summernote
 //= require angular-locale_ru-ua
 //= require app
+

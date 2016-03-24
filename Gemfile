@@ -21,11 +21,13 @@ gem 'active_model_serializers'
 gem 'puma', '~> 2.14.0'
 gem 'i18n-js', '>= 3.0.0.rc11'
 gem 'devise'
+gem 'devise-encryptable',                 '~> 0.2.0'
 gem 'ffi'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'dotenv'
 gem 'kaminari'
+gem 'summernote-rails'
 
 group :development, :test do
   gem 'byebug'

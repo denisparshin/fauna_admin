@@ -3,7 +3,7 @@ class ApiController < ApplicationController
 
   load_and_authorize_resource except: [:create]
 
-  skip_before_action :verify_authenticity_token if Rails.env == "development"
+  #skip_before_action :verify_authenticity_token if Rails.env == "development"
 
   include SerializerApi
   include ControllerApi
@@ -46,10 +46,22 @@ class ApiController < ApplicationController
     end
   end
 
+  def update
+    if loaded_resource.update(resource_params)
+      render json: {symbol_params_one => serialize_object(loaded_resource, serializer_name, {scope: :update})}
+    else
+      render_error
+    end
+  end
+
   private
 
   def render_error
     render json: {error: I18n.t("info.something_went_wrong") }
+  end
+
+  def resource_params
+    params.require(symbol_params_one).permit(to_permit)
   end
 
 end

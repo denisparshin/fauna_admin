@@ -5,4 +5,5 @@ class Product < ActiveRecord::Base
   has_many :sub_products, dependent: :destroy
   has_many :comments, as: :commentable
   scope :index, -> { includes(:sub_products, slider: :pictures, category: :catalog)  }
+  accepts_nested_attributes_for :metatag
 end

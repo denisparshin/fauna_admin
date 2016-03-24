@@ -11,3 +11,27 @@ ru-ua:
     products:
       title: "Товары"
       confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"
+      attributes:
+        name: "Имя"
+        title: "Заголовок (title)"
+        metatag_attributes:
+          keywords: "Мета keywords"
+          description: "Мета description"
+        description: "Описание"
+    users:
+      confirm_password: 'Еще раз пароль'
+      email: "Email"
+      enter: "Войти"
+      forgot_a_password: "Забыли пароль?"
+      password: "Пароль"
+      remember_me: "Запомнить меня"
+      sign_in: "Войти"
+      sign_up: 'Зарегистрироваться'
+      signed_out: "Успешно вышли"
+      have_account: "Уже есть аккаунт?"
+      have_no_account: "Еще нету аккаунта?"
+      signed_in: "Успешно вошли"
+      signed_out: "Успешно вышли"
+      signed_up: "Регистрация успешна"
+      profile_updated: "Ваш профиль был обновлен"
+

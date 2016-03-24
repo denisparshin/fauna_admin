@@ -1,3 +1,3 @@
 class Api::Users::UserSerializer < ::ApiSerializer
-  attributes :id
+  attributes :id, :email, :username
 end
