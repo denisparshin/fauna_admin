@@ -1,12 +1,28 @@
 class Api::ProductSerializer < ApiSerializer
-  attributes :id
+  attributes :id, :name
 
   def index 
-    [:id, :name, :sub_products, :pictures, :catalog, :category]
+    [:sub_products, :pictures, :catalog, :category]
   end
 
   def show
-    [:id, :name, :slug]
+    [ :title, 
+      :category_id, 
+      :description, 
+      :metatag_id, 
+      :slug, 
+      :slider,
+      :metatag,
+      :to_edit,
+    ] 
+  end
+
+  def metatag
+    serialize_object object.metatag, Api::MetatagSerializer, {scope: :in_product}
+  end
+
+  def slider
+    serialize_object object.slider, Api::SliderSerializer, {scope: :in_product}
   end
 
   def category
