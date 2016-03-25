@@ -5,7 +5,6 @@ class Api::SubProductSerializer < ApiSerializer
     [:id,
      :sku,
      :name,
-     :description,
      :price,
      :visible,
      :avail,

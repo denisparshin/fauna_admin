@@ -4,13 +4,23 @@ ru-ua:
       are_you_sure: "Вы уверены?"
       cancel: "Отменить"
       confirm: "Согласен"
+      delete: "Удалить"
+      submit: "Отправить"
     categories:
       title: "Категории"
     catalogs:
       title: "Каталоги"
+    sub_products:
+      attributes:
+        name: "Имя"
+        price: "Цена"
+        count: "Остаток (шт)"
+        visible: "На витрине"
+        avail: "В наличии"
     products:
       title: "Товары"
       confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"
+      successfully_removed: "Товар был успешно удален"
       tabs:
         info: "Информация"
         slider: "Картинки"

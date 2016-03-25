@@ -1,2 +1,6 @@
 .tab-content.bg-white.gtr-hor.gtr-ver
-  {{sub_products}}
+  .text-line.row-t
+    .clearfix(ng-repeat="sub in sub_products track by sub.id")
+      %div(ng-include src="'products/_tab_sub_products_item.html'")
+  .clearfix
+    %button.btn-link {{::"js.sub_products.actions.add_new" | translate}}

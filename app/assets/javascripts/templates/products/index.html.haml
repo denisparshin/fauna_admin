@@ -7,7 +7,7 @@
             .tbl-cell.cell-3.align-top.gtr-hor
               %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}') 
                 %img.cell-12(ng-src="{{product.pictures[0]}}")
-            .tbl-cell.cell-7.align-top.gtr-hor
+            .tbl-cell.cell-9.align-top.gtr-hor
               .text-line
                 %a(ng-href='/#/catalogs/{{::product.category.catalog.id}}') {{::product.category.catalog.name}}
                 \/
@@ -19,9 +19,5 @@
                 .smile.label.label-default.align-middle {{sub.sku}}
                 .smile.align-middle(ng-bind-html="sub.name")
                 %i.smile.align-middle.color-green ({{sub.price | currency}})
-            .tbl-cell.cell-2.align-bottom.gtr-hor.text-right
-              %button.btn.btn-danger(type="button" 
-                ng-click="removeProduct(product.id, $index)" 
-                confirm="{{::'js.products.confirm_remove' | translate}}")=icon :trash
 
   %pagination(page="page" count="count" per="per")
