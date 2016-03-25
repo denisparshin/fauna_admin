@@ -1,3 +1,13 @@
+.#{$icomoon-prefix}-palm { 
+  &:before {
+    content: $icon-palm;
+  }
+}
+.#{$icomoon-prefix}-bitcoin-ticket { 
+  &:before {
+    content: $icon-bitcoin-ticket;
+  }
+}
 .#{$icomoon-prefix}-menu { 
   &:before {
     content: $icon-menu;
@@ -66,11 +76,6 @@
 .#{$icomoon-prefix}-check { 
   &:before {
     content: $icon-check;
-  }
-}
-.#{$icomoon-prefix}-bitcoin-ticket { 
-  &:before {
-    content: $icon-bitcoin-ticket;
   }
 }
 
