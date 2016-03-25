@@ -11,6 +11,11 @@ ru-ua:
     products:
       title: "Товары"
       confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"
+      tabs:
+        info: "Информация"
+        slider: "Картинки"
+        comments: "Комментарии"
+        sub_products: "Подпродукты"
       attributes:
         name: "Имя"
         title: "Заголовок (title)"
