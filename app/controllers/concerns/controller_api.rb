@@ -30,7 +30,11 @@ module ControllerApi
   def loaded_resources(scope=nil)
     res = instance_variable_get("@" + symbol_params_many.to_s)
     if loaded_class.respond_to?(scope.to_s, true)
-      res.send(scope) 
+      begin
+        res.send(scope)
+      rescue ArgumentError
+        res.send(scope, Search.new(params[:search]))
+      end
     else
       res
     end

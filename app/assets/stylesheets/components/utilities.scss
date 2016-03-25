@@ -63,9 +63,3 @@
 .no-select {
   @include user-select(none);
 }
-.tab-content.bg-white {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #DDDDDD;
-  border-top: 0;
-}

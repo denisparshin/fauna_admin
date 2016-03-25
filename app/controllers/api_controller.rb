@@ -10,7 +10,7 @@ class ApiController < ApplicationController
   
   def index
     if params[:showall]
-      render json: { symbol_params_many => loaded_resources(:index) }
+      render json: { symbol_params_many => serialize_objects(loaded_resources(:index), serializer_name, {scope: :index})}
     else
       data = loaded_resources(:index)
       params[:page] ||= 1
