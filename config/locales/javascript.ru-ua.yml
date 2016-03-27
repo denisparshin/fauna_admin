@@ -6,11 +6,30 @@ ru-ua:
       confirm: "Согласен"
       delete: "Удалить"
       submit: "Отправить"
+      save: "Сохранить"
+      add: "Добавить"
+      close: "Закрыть"
     categories:
       title: "Категории"
     catalogs:
       title: "Каталоги"
+    pictures:
+      actions:
+        add: "Добавить изображение"
+        delete: "Удалить изображение"
+        confirm_remove: "Вы действительно хотите удалить это изображение?"
+      slider: "Изображения"
+      info:
+        successfully_removed: "Изображение успешно удалено."
     sub_products:
+      actions:
+        add_new: "Добавить новый подпродукт"
+        delete: "Удалить подпродукт"
+        confirm_remove: "Вы действительно хотите удалить этот подпродукт?"
+      info:
+        successfully_removed: "Подпродукт был успешно удален"
+        successfully_created: "Подпродукт успешно добавлен"
+        successfully_updated: "Подпродукт успешно изменен"
       attributes:
         name: "Имя"
         price: "Цена"
@@ -19,8 +38,10 @@ ru-ua:
         avail: "В наличии"
     products:
       title: "Товары"
-      confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"
       successfully_removed: "Товар был успешно удален"
+      actions:
+        delete: "Удалить товар"
+        confirm_remove: "Вы действительно хотите безвозвратно удалить этот товар со всеми подтоварами и картинками?"
       tabs:
         info: "Информация"
         slider: "Картинки"
@@ -33,6 +54,8 @@ ru-ua:
           keywords: "Мета keywords"
           description: "Мета description"
         description: "Описание"
+    info:
+      something_went_wrong: "Что-то пошло не так:( Пожалуйста перезагрузите страницу"
     users:
       confirm_password: 'Еще раз пароль'
       email: "Email"

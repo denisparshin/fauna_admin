@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :products
+    resources :sliders
     resources :catalogs
     resources :categories
     resources :sub_products
+    resources :pictures
     resources :filter_groups
   end
 

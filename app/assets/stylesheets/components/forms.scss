@@ -8,6 +8,10 @@ input:-webkit-autofill:focus {
 }
 
 .form {
+  &-pull {
+    position: absolute;
+    left: -9999em;
+  }
   &-label {
     @include clearfix;
     display: block;

@@ -3,9 +3,9 @@
     %ul.nav.nav-tabs
       %li(ng-repeat="tab in tabs track by $index" ng-class="{'active': activeTab==tab}")
         %a(ng-href='/#/products/{{::productId}}/{{::tab}}') {{::"js.products.tabs." + tab | translate}} 
-      .pull-right(style="padding-top: 3px;")
-        %button.btn.btn-link.link-red(type="button" ng-click="removeProduct(productId)" confirm="{{::'js.products.confirm_remove' | translate}}")
-          %span(bs-tooltip title="{{::'js.helpers.delete' | translate}}" placement="left")
+      .pull-right.gtr-r(style="padding-top: 3px;")
+        %button.btn.btn-link.link-red(type="button" ng-click="removeProduct(productId)" confirm="{{::'js.products.actions.confirm_remove' | translate}}")
+          %span(bs-tooltip title="{{::'js.products.actions.delete' | translate}}" placement="left")
             =icon :trash
   .clearfix(ng-switch="activeTab")
     %div(ng-switch-when="info" product-tab-info product-id="productId")

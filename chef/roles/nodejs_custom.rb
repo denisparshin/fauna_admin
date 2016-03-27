@@ -16,7 +16,7 @@ default_attributes(
       'bower',
       'forever',
       'phantom',
-      'phantomjs'
+      'phantomjs-prebuilt'
     ]
   }
 )

@@ -25,6 +25,7 @@
 //= require modules/modules
 //= require bootstrap/tooltip
 //= require bootstrap/modal
+//= require bootstrap/carousel
 //= require summernote
 //= require angular-summernote/src/angular-summernote
 //= require angular-locale_ru-ua

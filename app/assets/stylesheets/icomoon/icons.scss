@@ -1,3 +1,23 @@
+.#{$icomoon-prefix}-l-angle-up { 
+  &:before {
+    content: $icon-l-angle-up;
+  }
+}
+.#{$icomoon-prefix}-l-angle-right { 
+  &:before {
+    content: $icon-l-angle-right;
+  }
+}
+.#{$icomoon-prefix}-l-angle-left { 
+  &:before {
+    content: $icon-l-angle-left;
+  }
+}
+.#{$icomoon-prefix}-l-angle-down { 
+  &:before {
+    content: $icon-l-angle-down;
+  }
+}
 .#{$icomoon-prefix}-palm { 
   &:before {
     content: $icon-palm;
@@ -21,6 +41,11 @@
 .#{$icomoon-prefix}-close { 
   &:before {
     content: $icon-close;
+  }
+}
+.#{$icomoon-prefix}-plus { 
+  &:before {
+    content: $icon-plus;
   }
 }
 .#{$icomoon-prefix}-shopping-cart { 
