@@ -26,6 +26,13 @@ directive = ->
         else
           App.Alert.show "danger", I18n.t("js.info.something_went_wrong")
 
+    $scope.updateMainPic = ->
+      CRUD.update "sliders", $scope.slider.id, {slider: {primary_pic_id: $scope.slider.primary_pic_id}}, (response) ->
+        if response.slider.id
+          App.Alert.show "success", I18n.t("js.pictures.info.main_pic_is_set")
+        else
+          App.Alert.show "danger", I18n.t("js.info.something_went_wrong")
+
     $scope.carouselShow = (index) ->
       $scope.activePic = index
       carouselModal.show()

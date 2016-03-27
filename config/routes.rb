@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :sub_products
     resources :pictures
     resources :filter_groups
+    resources :filter_values
   end
 
 end

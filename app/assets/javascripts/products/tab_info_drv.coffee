@@ -12,7 +12,7 @@ directive = ->
     $scope.updateProduct = (data) ->
       product = _.object(_.map(["name", "title", "description", "metatag_attributes"], (k) -> [k, data[k]]))
       CRUD.update "products", $scope.product.id, {product: product}, (response) ->
-        App.Alert.show "success", I18n.t("js.products.successfully_updated")
+        App.Alert.show "success", I18n.t("js.products.info.successfully_updated")
   ]
 
 angular.module "app.products"

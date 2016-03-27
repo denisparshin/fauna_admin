@@ -2,13 +2,20 @@
   .row(ng-if="slider")
     %span(ng-repeat="picture in slider.pictures track by $index")
       .col-xs-3
-        .text-row.pic-link.position-relative
-          .link-remove-tl.cursor-pointer(ng-click="removePic(picture.id, $index)" confirm="{{::'js.pictures.actions.confirm_remove' | translate}}")
-            %span(bs-tooltip title="{{::'js.pictures.actions.delete' | translate}}" container="body")
-              = icon :trash, class: "btn-link link-red"
-          .clearfix.position-relative.border-hor.border-ver.border-light.bg-superlight.btn.nospace(ng-click="carouselShow($index)")
-            %svg(class="col-12" preserveAspectRatio="none" viewBox="0 0 1 1")
-            .cover.bg-contain(style="background-image: url('{{picture.url}}')")
+        .text-row
+          .pic-link(ng-class="{'active': slider.primary_pic_id==picture.id}")
+            .link-remove-tl-n
+              %label.form-checkbox
+                %input(type="radio" value="{{picture.id}}" ng-model="slider.primary_pic_id" ng-change="updateMainPic()")
+                %span(bs-tooltip ng-if="slider.primary_pic_id!=picture.id" title="{{::'js.pictures.actions.set_as_main' | translate}}" container="body")
+                %span(bs-tooltip ng-if="slider.primary_pic_id==picture.id" title="{{::'js.pictures.info.is_main' | translate}}" container="body")
+
+            .link-remove-tl.cursor-pointer(ng-click="removePic(picture.id, $index)" confirm="{{::'js.pictures.actions.confirm_remove' | translate}}")
+              %span(bs-tooltip title="{{::'js.pictures.actions.delete' | translate}}" container="body")
+                = icon :trash, class: "btn-link link-red"
+            .clearfix.position-relative(ng-click="carouselShow($index)")
+              %svg(class="col-12" preserveAspectRatio="none" viewBox="0 0 1 1")
+              .cover.bg-contain(style="background-image: url('{{picture.url}}')")
     .col-xs-3
       .text-row
         .clearfix.position-relative.border-hor.border-ver.border-light.btn-default

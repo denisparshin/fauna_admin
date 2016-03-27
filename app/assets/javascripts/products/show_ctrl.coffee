@@ -5,7 +5,7 @@ controller = ($scope, $routeParams, $location) ->
   $scope.removeProduct = (id) ->
     CRUD.remove "products", id, (response) ->
       if response.id
-        App.Alert.show "info", I18n.t("js.product.successfully_removed")
+        App.Alert.show "info", I18n.t("js.products.info.successfully_removed")
         $location.path "/products"
         $scope.$apply() unless $scope.$$phase
       else 

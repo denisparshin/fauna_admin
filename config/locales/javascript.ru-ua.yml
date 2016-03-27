@@ -18,9 +18,12 @@ ru-ua:
         add: "Добавить изображение"
         delete: "Удалить изображение"
         confirm_remove: "Вы действительно хотите удалить это изображение?"
+        set_as_main: "Установить основной"
       slider: "Изображения"
       info:
         successfully_removed: "Изображение успешно удалено."
+        is_main: "Основное изображение"
+        main_pic_is_set: "Установлено новое основное изображение"
     sub_products:
       actions:
         add_new: "Добавить новый подпродукт"
@@ -47,6 +50,9 @@ ru-ua:
         slider: "Картинки"
         comments: "Комментарии"
         sub_products: "Подпродукты"
+      info:
+        successfully_removed: "Продукт был успешно удален"
+        successfully_updated: "Продукт успешно обновлен"
       attributes:
         name: "Имя"
         title: "Заголовок (title)"

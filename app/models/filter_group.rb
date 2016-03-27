@@ -4,4 +4,5 @@ class FilterGroup < ActiveRecord::Base
     text: 0,
     digit: 1
   }
+  scope :index, -> { includes(:filter_values) }
 end
