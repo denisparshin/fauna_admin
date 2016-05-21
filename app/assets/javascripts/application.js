@@ -1,9 +1,11 @@
 //= require jquery
-
+//= require js-xlsx/dist/jszip
+//= require js-xlsx/dist/xlsx
 //= require i18n
 //= require i18n/translations
 //= require angular/angular
 //= require angular-route/angular-route
+//= require checklist-model/checklist-model
 //= require underscore/underscore
 //= require qrcode-generator/js/qrcode
 //= require angular-rails-templates

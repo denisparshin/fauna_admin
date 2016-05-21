@@ -184,6 +184,7 @@ GEM
       json (~> 1.4)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
+    rolify (4.1.1)
     ruby_parser (3.7.3)
       sexp_processor (~> 4.1)
     sass (3.4.21)
@@ -261,6 +262,7 @@ DEPENDENCIES
   puma (~> 2.14.0)
   rails (= 4.2.5.1)
   responders
+  rolify (~> 4.1.1)
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
   spring
@@ -270,4 +272,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.3

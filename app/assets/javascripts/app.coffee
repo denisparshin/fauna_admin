@@ -2,6 +2,7 @@
 //= require ./auth/auth
 //= require ./products/products
 //= require ./shared/shared
+//= require ./import/import
 
 angular.module "app", [
   "ngRoute"
@@ -19,10 +20,12 @@ angular.module "app", [
   "mgcrea.ngStrap.datepicker"
   "monospaced.qrcode"
   "summernote"
+  "checklist-model"
   "app.core"
   "app.auth"
   "app.products"
   "app.shared"
+  "app.import"
 ]
 
 I18n.defaultLocale = "ru-ua"

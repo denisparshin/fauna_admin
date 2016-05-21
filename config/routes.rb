@@ -17,6 +17,13 @@ Rails.application.routes.draw do
     resources :pictures
     resources :filter_groups
     resources :filter_values
+    scope :import, defaults: { format: :json} do
+      post :products, to: "import#products"
+    end
+    scope :export, defaults: { format: :json} do
+      post :products, to: "export#products"
+    end
   end
+
 
 end

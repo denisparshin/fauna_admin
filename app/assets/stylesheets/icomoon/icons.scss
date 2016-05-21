@@ -1,31 +1,11 @@
-.#{$icomoon-prefix}-l-angle-up { 
+.#{$icomoon-prefix}-cloud-download { 
   &:before {
-    content: $icon-l-angle-up;
+    content: $icon-cloud-download;
   }
 }
-.#{$icomoon-prefix}-l-angle-right { 
+.#{$icomoon-prefix}-file-upload { 
   &:before {
-    content: $icon-l-angle-right;
-  }
-}
-.#{$icomoon-prefix}-l-angle-left { 
-  &:before {
-    content: $icon-l-angle-left;
-  }
-}
-.#{$icomoon-prefix}-l-angle-down { 
-  &:before {
-    content: $icon-l-angle-down;
-  }
-}
-.#{$icomoon-prefix}-palm { 
-  &:before {
-    content: $icon-palm;
-  }
-}
-.#{$icomoon-prefix}-bitcoin-ticket { 
-  &:before {
-    content: $icon-bitcoin-ticket;
+    content: $icon-file-upload;
   }
 }
 .#{$icomoon-prefix}-menu { 
@@ -41,6 +21,16 @@
 .#{$icomoon-prefix}-close { 
   &:before {
     content: $icon-close;
+  }
+}
+.#{$icomoon-prefix}-upload { 
+  &:before {
+    content: $icon-upload;
+  }
+}
+.#{$icomoon-prefix}-file-excel-o { 
+  &:before {
+    content: $icon-file-excel-o;
   }
 }
 .#{$icomoon-prefix}-plus { 
@@ -96,6 +86,36 @@
 .#{$icomoon-prefix}-paper-plane { 
   &:before {
     content: $icon-paper-plane;
+  }
+}
+.#{$icomoon-prefix}-l-angle-up { 
+  &:before {
+    content: $icon-l-angle-up;
+  }
+}
+.#{$icomoon-prefix}-l-angle-right { 
+  &:before {
+    content: $icon-l-angle-right;
+  }
+}
+.#{$icomoon-prefix}-l-angle-left { 
+  &:before {
+    content: $icon-l-angle-left;
+  }
+}
+.#{$icomoon-prefix}-l-angle-down { 
+  &:before {
+    content: $icon-l-angle-down;
+  }
+}
+.#{$icomoon-prefix}-palm { 
+  &:before {
+    content: $icon-palm;
+  }
+}
+.#{$icomoon-prefix}-bitcoin-ticket { 
+  &:before {
+    content: $icon-bitcoin-ticket;
   }
 }
 .#{$icomoon-prefix}-check { 

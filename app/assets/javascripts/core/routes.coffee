@@ -7,18 +7,21 @@ angular.module "app.core"
       .when '/sign_in',
         templateUrl: 'auth/sign_in.html',
         controller: 'sessionsCtrl'
+      .when '/import',
+        templateUrl: 'import/show.html',
+        controller: 'importCtrl'
       .when '/products',
         templateUrl: 'products/index.html',
-        controller: 'productsIndexCtrl' 
+        controller: 'productsIndexCtrl'
       .when '/products/:id',
         templateUrl: 'products/show.html',
-        controller: 'productsShowCtrl' 
+        controller: 'productsShowCtrl'
       .when '/products/:id/:activeTab',
         templateUrl: 'products/show.html',
-        controller: 'productsShowCtrl' 
+        controller: 'productsShowCtrl'
       .when '/',
         templateUrl: 'pages/index.html',
-        controller: false 
+        controller: false
       .otherwise
         redirectTo: '/'
   ]

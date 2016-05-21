@@ -1,5 +1,7 @@
 ru-ua:
   js:
+    import:
+      title: "Импорт/Экспорт"
     helpers:
       are_you_sure: "Вы уверены?"
       cancel: "Отменить"

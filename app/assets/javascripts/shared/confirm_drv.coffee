@@ -20,7 +20,7 @@ directive = ->
       $event.preventDefault()
       scope.dataConfirmModal.show()
     )
-      
+
 angular.module "app.shared"
   .directive "confirm", [directive]
 

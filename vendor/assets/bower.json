@@ -9,6 +9,8 @@
     "ng-file-upload": "latest",
     "underscore": "latest",
     "angular-qrcode": "latest",
-    "angular-summernote": "latest"
+    "angular-summernote": "latest",
+    "js-xlsx": "latest",
+    "checklist-model": "latest"
   }
 }
