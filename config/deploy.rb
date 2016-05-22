@@ -11,10 +11,6 @@ set :rvm_ruby_version, 'ruby-2.2.3@admin_parkshop --create'
 
 set :linked_dirs, %w(log tmp public/uploads public/system)
 
-set :npm_target_path, -> { release_path.join('sign_js') } # default not set
-set :npm_flags, '--production --silent --no-progress'    # default
-set :npm_roles, :all                                     # default
-set :npm_env_variables, {}
 
 namespace :deploy do
   desc 'Setup production'
