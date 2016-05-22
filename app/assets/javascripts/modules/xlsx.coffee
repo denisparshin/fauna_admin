@@ -11,7 +11,7 @@
   makeCell = (c, r, item) ->
     c: c
     r: r
-    v: (if typeof(item) == 'number' then item else (item + '').replace(/[\s]+/g, ' '))
+    v: if item then ((if typeof(item) == 'number' then item else (item + '').replace(/[\s]+/g, ' '))) else ''
     t: (if typeof(item) == 'number' then 'n' else 's')
 
   @fromArray = (array, sheetName) ->

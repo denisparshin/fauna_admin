@@ -38,6 +38,6 @@ class Api::ProductSerializer < ApiSerializer
   end
 
   def pictures
-    object.slider.try(:pictures).to_a.map{|p| [ENV["ORIGIN_URL"], p.file.big.url].join('/') }
+    object.slider.try(:pictures).to_a.map{|p| p.file.big.url }
   end
 end
