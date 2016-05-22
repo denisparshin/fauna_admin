@@ -2,7 +2,7 @@
   .gtr-hor.gtr-t
     %form(name="subProductForm" ng-submit="submit(sub, subProductForm)")
       .row
-        .col-xs-6
+        .col-xs-4
           %label.form-label.required
             .form-label-text {{::"js.sub_products.attributes.name" | translate}}
             %input.form-control(ng-model="sub.name" required)
@@ -14,6 +14,10 @@
           %label.form-label.required
             .form-label-text {{::"js.sub_products.attributes.count" | translate}}
             %input.form-control(ng-model="sub.count" required )
+        .col-xs-2
+          %label.form-label.required
+            .form-label-text {{::"js.sub_products.attributes.sku" | translate}}
+            %input.form-control(ng-model="sub.sku")
       .clearfix
         .tbl
           .tbl-cell.align-bottom

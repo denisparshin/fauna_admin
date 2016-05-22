@@ -41,6 +41,7 @@ ru-ua:
         count: "Остаток (шт)"
         visible: "На витрине"
         avail: "В наличии"
+        sku: "Артикул"
     products:
       title: "Товары"
       successfully_removed: "Товар был успешно удален"
@@ -68,6 +69,7 @@ ru-ua:
       confirm_password: 'Еще раз пароль'
       email: "Email"
       enter: "Войти"
+      login: "Логин"
       forgot_a_password: "Забыли пароль?"
       password: "Пароль"
       remember_me: "Запомнить меня"

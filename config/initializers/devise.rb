@@ -3,6 +3,9 @@ Devise.setup do |config|
 
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
+  config.authentication_keys = [ :login ]
+  config.reset_password_keys = [ :username ]
+  config.confirmation_keys = [ :username ]
   config.skip_session_storage = [:http_auth]
   config.stretches = Rails.env.test? ? 1 : 10
   config.reconfirmable = true
