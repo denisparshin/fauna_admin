@@ -4,17 +4,17 @@ set :use_sudo, false
 set :deploy_via, :copy
 set :keep_releases, 5
 set :pty, true
-set :repo_url, 'git@bitbucket.org:cryptotickets_team2/blockstarter.git'
+set :repo_url, 'git@bitbucket.org:parkstation/parkshop_admin.git'
 
-set :deploy_to, '/home/deployer/sites/blockstarter'
-set :rvm_ruby_version, 'ruby-2.2.3@blockstarter --create'
+set :deploy_to, '/home/deployer/sites/admin_parkshop'
+set :rvm_ruby_version, 'ruby-2.2.3@admin_parkshop --create'
 
 set :linked_dirs, %w(log tmp public/uploads public/system)
 
 set :npm_target_path, -> { release_path.join('sign_js') } # default not set
 set :npm_flags, '--production --silent --no-progress'    # default
 set :npm_roles, :all                                     # default
-set :npm_env_variables, {}   
+set :npm_env_variables, {}
 
 namespace :deploy do
   desc 'Setup production'
@@ -45,9 +45,9 @@ namespace :deploy do
     desc 'Install bower'
     task :install do
       on roles(:all) do
-	within release_path do
-	  execute :rake, 'bower:install CI=true'
-	end
+      within release_path do
+        execute :rake, 'bower:install CI=true'
+      end
       end
     end
   end
