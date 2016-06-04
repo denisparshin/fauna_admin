@@ -1,7 +1,12 @@
 controller = ($scope, Auth, $location, $rootScope, $route) ->
   $rootScope.ready = false
+
+  $rootScope.allApply = ->
+    $rootScope.$apply() if $rootScope.phase != '$apply' && $rootScope.phase != '$digest'
+    return true
+
   redirectToLogin = ->
-    $location.path '/sign_in' 
+    $location.path '/sign_in'
     $scope.apply() unless $scope.$$phase
     $route.reload()
 

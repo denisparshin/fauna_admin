@@ -19,9 +19,12 @@ angular.module "app.core"
       .when '/products/:id/:activeTab',
         templateUrl: 'products/show.html',
         controller: 'productsShowCtrl'
+      .when '/orders',
+        templateUrl: 'orders/index.html',
+        controller: 'ordersIndexCtrl'
       .when '/',
-        templateUrl: 'pages/index.html',
-        controller: false
+        templateUrl: 'orders/index.html',
+        controller: 'ordersIndexCtrl'
       .otherwise
         redirectTo: '/'
   ]

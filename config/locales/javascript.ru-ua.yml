@@ -2,15 +2,69 @@ ru-ua:
   js:
     import:
       title: "Импорт/Экспорт"
+    orders:
+      title: "Заказы"
+      order_from: 'Заказ от'
+      statuses:
+        created:
+          color: "#b9e9f7"
+          title: "Необработанный"
+        in_progress:
+          color: "#F7B9E1"
+          title: "Формируется"
+        sent:
+          color: "#B3DFF5"
+          title: "Отправлен"
+        aproved:
+          color: "#cbf7b9"
+          title: "Выполнен"
+        declined:
+          color: "#ffc6c6"
+          title: "Отклонен"
+        waiting:
+          color: 'wheat'
+          title: 'Отложен'
+    product:
+      buy: 'В корзину'
+      price: 'Цена'
+      sku: 'Артикул'
+    order:
+      comment_to_order: 'Комментарий к заказу'
+      items_in_cart: 'Товары в корзине'
+      order_from: 'Заказ от'
+      payment_methods: 'Способы оплаты'
+      payment_method: 'Способ оплаты'
+      personal_data: 'Личные данные'
+      shipping_methods: 'Способы доставки'
+      shipping_method: 'Способ доставки'
+    forms:
+      name: 'Имя'
+      last_name: 'Фамилия'
+      phone: 'Телефон'
+      address: 'Адрес'
+      region: 'Область'
+      city: 'Город'
+      email: "Email"
     helpers:
-      are_you_sure: "Вы уверены?"
-      cancel: "Отменить"
-      confirm: "Согласен"
-      delete: "Удалить"
-      submit: "Отправить"
-      save: "Сохранить"
       add: "Добавить"
+      all: 'Все'
+      are_you_sure: "Вы уверены?"
+      blankstate: 'Пока что контента нет('
+      call_request: 'Заказать звонок'
+      cancel: "Отменить"
       close: "Закрыть"
+      close: 'Закрыть'
+      confirm: "Согласен"
+      currency: 'грн'
+      date_from: 'С (дата)'
+      date_to: 'По (дата)'
+      delete: "Удалить"
+      filters: 'Фильтры'
+      nothing_found: "Ничего не найдено :( Попробуйте уточнить поиск."
+      save: "Сохранить"
+      search: 'Поиск'
+      status: 'Статус'
+      submit: "Отправить"
     categories:
       title: "Категории"
     catalogs:

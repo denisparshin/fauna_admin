@@ -1,20 +1,28 @@
 class Api::ProductSerializer < ApiSerializer
   attributes :id, :name
 
-  def index 
+  def index
     [:sub_products, :pictures, :catalog, :category]
   end
 
   def show
-    [ :title, 
-      :category_id, 
-      :description, 
-      :metatag_id, 
-      :slug, 
+    [ :title,
+      :category_id,
+      :description,
+      :metatag_id,
+      :slug,
       :slider,
       :metatag_attributes,
       :to_edit,
-    ] 
+    ]
+  end
+
+  def as_order
+    [:name, :pic_micro]
+  end
+
+  def pic_micro
+    object.slider.pictures.first.file.micro.url if object.slider && object.slider.pictures.first
   end
 
   def metatag_attributes

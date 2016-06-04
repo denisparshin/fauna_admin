@@ -3,6 +3,7 @@
 //= require ./products/products
 //= require ./shared/shared
 //= require ./import/import
+//= require ./orders/orders
 
 angular.module "app", [
   "ngRoute"
@@ -26,6 +27,7 @@ angular.module "app", [
   "app.products"
   "app.shared"
   "app.import"
+  "app.orders"
 ]
 
 I18n.defaultLocale = "ru-ua"
