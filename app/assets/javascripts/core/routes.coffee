@@ -21,7 +21,7 @@ angular.module "app.core"
         controller: 'productsShowCtrl'
       .when '/orders',
         templateUrl: 'orders/index.html',
-        controller: 'ordersIndexCtrl'
+        controller: 'ordersIndexCtrl',
       .when '/',
         templateUrl: 'orders/index.html',
         controller: 'ordersIndexCtrl'

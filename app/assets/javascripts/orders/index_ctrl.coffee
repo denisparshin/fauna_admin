@@ -1,7 +1,8 @@
 controller = ($scope, safeApply, $location) ->
 
   $params = App.Params.get()
-
+  $params.page = 1 if !$params.page
+  $scope.search = $params.search if $params.search
   $scope.statuses = I18n.t("js.orders.statuses")
   $params.page = 1 unless $params.page
 

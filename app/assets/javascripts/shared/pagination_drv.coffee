@@ -6,7 +6,7 @@ paginationDirective = ->
     count: "="
     page: "="
   templateUrl: "shared/pagination.html"
-  controller: ["$scope", "$location", "$routeParams", ($scope, $location, $routeParams) ->
+  controller: ["$scope", "$location", "$routeParams", "safeApply", ($scope, $location, $routeParams, safeApply) ->
     calculatePages = ->
       buf = []
       o = 0
@@ -14,7 +14,7 @@ paginationDirective = ->
       while o < 7
         if start >= 1
           buf.push start
-          o++ 
+          o++
         start++
         break if start >= $scope.pagesAmount
       buf
@@ -26,6 +26,7 @@ paginationDirective = ->
       $scope.viewPages = calculatePages()
       if $routeParams.page && parseInt($routeParams.page) > $scope.pagesAmount
         $location.search $.extend(_.omit($location.search(), "page"), {page: $scope.pagesAmount})
+      safeApply($scope)
 
 
     $scope.page = 1 unless $scope.page
