@@ -4,7 +4,7 @@ set :use_sudo, false
 set :deploy_via, :copy
 set :keep_releases, 5
 set :pty, true
-set :repo_url, 'git@bitbucket.org:parkstation/parkshop_admin.git'
+set :repo_url, 'git@github.com:babakhanov/fauna_admin.git'
 
 set :deploy_to, '/home/deployer/sites/admin_parkshop'
 set :rvm_ruby_version, 'ruby-2.2.3@admin_parkshop --create'
