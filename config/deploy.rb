@@ -6,8 +6,8 @@ set :keep_releases, 5
 set :pty, true
 set :repo_url, 'git@github.com:babakhanov/fauna_admin.git'
 
-set :deploy_to, '/home/deployer/sites/admin_parkshop'
-set :rvm_ruby_version, 'ruby-2.2.3@admin_parkshop --create'
+set :deploy_to, '/home/deployer/sites/parkshop_admin'
+set :rvm_ruby_version, 'ruby-2.2.3@parkshop_admin --create'
 
 set :linked_dirs, %w(log tmp public/uploads public/system)
 
