@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :filter_groups
     resources :filter_values
     resources :orders
+    resources :top_sliders
     scope :import, defaults: { format: :json} do
       post :products, to: "import#products"
     end

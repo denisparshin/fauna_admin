@@ -11,7 +11,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   version :large do
-    resize_to_limit(800, 800)
+    resize_to_limit(1920, 1920)
   end
 
   version :big do

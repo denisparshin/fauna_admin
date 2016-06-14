@@ -24,6 +24,8 @@ ru-ua:
         waiting:
           color: 'wheat'
           title: 'Отложен'
+    top_slider:
+      title: "Слайдер на главной"
     product:
       buy: 'В корзину'
       price: 'Цена'

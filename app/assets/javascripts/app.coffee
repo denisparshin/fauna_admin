@@ -4,6 +4,7 @@
 //= require ./shared/shared
 //= require ./import/import
 //= require ./orders/orders
+//= require ./top_slider/top_slider
 
 angular.module "app", [
   "ngRoute"
@@ -28,6 +29,7 @@ angular.module "app", [
   "app.shared"
   "app.import"
   "app.orders"
+  "app.top_slider"
 ]
 
 I18n.defaultLocale = "ru-ua"
