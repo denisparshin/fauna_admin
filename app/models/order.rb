@@ -22,5 +22,13 @@ class Order < ActiveRecord::Base
     .order(created_at: :desc)
   }
 
+  def order_data
+    ActiveSupport::JSON.decode self.data
+  end
+
+  def summ
+    self.order_data.map{|o| o["price"] * o["amount"] }.inject(0){|sum,x| sum + x}
+  end
+
   scope :all_summ, -> (from=Time.now, to=30.days.ago, status=3) { where("created_at > ?", to).where("created_at < ?", from).where(status: status).map{|o| ActiveSupport::JSON.decode(o[:data]).map{|i| i["price"].to_f * i["amount"].to_i }.inject(0){|sum,x| sum + x } }.inject(0){|sum,x| sum + x }  }
 end
