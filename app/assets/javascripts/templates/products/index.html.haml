@@ -1,12 +1,24 @@
 .clearfix
   //%products-index-filters
+  %form.text-line.row(name="filtersForm" ng-submit="submitSearch()")
+    .col-xs-4
+      %button.form-control.text-left(type="button" bs-select ng-model="search.catalog_id" bs-options="c.id as c.name for c in catalogs" data-placeholder="Catalog Id")
+    .col-xs-4
+      %button.form-control.text-left(type="button" bs-select ng-model="search.category_id" bs-options="c.id as c.name for c in getCategories()" data-placeholder="Category Id")
+    .col-xs-3
+      .input-group
+        %input.form-control(placeholder="keyword" ng-model="search.keyword")
+        .input-group-addon S
+    .col-xs-1
+      %button.btn.btn-primary.btn-block(type="submit")
+        Sbm
   .gtr-b-sm(ng-repeat="product in products track by product.id" product-item)
     .box-tickets.bg-white
       .gtr-hor-sm.gtr-ver-sm
         .row
           .tbl
             .tbl-cell.cell-3.align-top.gtr-hor
-              %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}') 
+              %a(ng-if="product.pictures.length" ng-href='/#/products/{{::product.id}}')
                 %img.cell-12(ng-src="{{product.pictures[0]}}")
             .tbl-cell.cell-9.align-top.gtr-hor
               .text-line
@@ -14,7 +26,7 @@
                 \/
                 %a(ng-href='/#/categories/{{::product.category.id}}') {{::product.category.name}}
                 \/
-                %a(ng-href='/#/products/{{::product.id}}') 
+                %a(ng-href='/#/products/{{::product.id}}')
                   {{::product.name}}
               .gtr-b-sm.text-sm(ng-repeat="sub in product.sub_products track by sub.id")
                 .smile.label.label-default.align-middle {{sub.sku}}
