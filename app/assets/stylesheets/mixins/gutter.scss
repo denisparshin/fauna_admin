@@ -27,7 +27,7 @@
       &-4x {
         @include prop($property, $value * 2, $props);
       }
-    } 
-  }  
+    }
+  }
 }
 

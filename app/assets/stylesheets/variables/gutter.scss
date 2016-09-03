@@ -2,22 +2,22 @@ $gutter: $grid-gutter-width;
 $gutter-sm: $grid-gutter-width / 2;
 
 $sides: (
-  "t", 
-  "r", 
-  "b", 
-  "l", 
-  "hor", 
+  "t",
+  "r",
+  "b",
+  "l",
+  "hor",
   "ver"
 );
 
 $sides-common: (top, right, bottom, left);
 
 $sides-prop: (
- ("top"), 
- ("right"), 
- ("bottom"), 
- ("left"), 
- ("left", "right"), 
+ ("top"),
+ ("right"),
+ ("bottom"),
+ ("left"),
+ ("left", "right"),
  ("top", "bottom")
 );
 

@@ -99,6 +99,20 @@ ru-ua:
         avail: "В наличии"
         sku: "Артикул"
     products:
+      placeholder:
+        category_id: "Категория..."
+        catalog_id: "Каталог..."
+        keyword: "Слово или фраза..."
+        order_by: "Сортировать..."
+      sorting:
+        - name: "От А до Я"
+          value: "name-asc"
+        - name: "От Я до А"
+          value: "name-desc"
+        - name: "Последние добавленные"
+          value: "created_at-asc"
+        - name: "Первые добавленные"
+          value: "created_at-desc"
       title: "Товары"
       successfully_removed: "Товар был успешно удален"
       actions:

@@ -1,17 +1,27 @@
 .clearfix
   //%products-index-filters
   %form.text-line.row(name="filtersForm" ng-submit="submitSearch()")
-    .col-xs-4
-      %button.form-control.text-left(type="button" bs-select ng-model="search.catalog_id" bs-options="c.id as c.name for c in catalogs" data-placeholder="Catalog Id")
-    .col-xs-4
-      %button.form-control.text-left(type="button" bs-select ng-model="search.category_id" bs-options="c.id as c.name for c in getCategories()" data-placeholder="Category Id")
+    %input.hidden(type="submit")
+    .col-xs-2
+      %select.form-control(ng-model="search.catalog_id")
+        %option(value='') {{::'js.products.placeholder.catalog_id' | translate}}
+        %option(ng-repeat="c in catalogs" value="{{c.id}}") {{c.name}}
     .col-xs-3
-      .input-group
-        %input.form-control(placeholder="keyword" ng-model="search.keyword")
-        .input-group-addon S
+      %select.form-control(ng-model="search.category_id")
+        %option(value='') {{::'js.products.placeholder.category_id' | translate}}
+        %option(ng-repeat="c in getCategories()" value="{{c.id}}") {{c.name}}
+    .col-xs-3
+      .form-search
+        %input.form-control(placeholder="{{::'js.products.placeholder.keyword' | translate}}")
+    .col-xs-3
+      %select.form-control(ng-model="search.order_by")
+        %option(value='') {{::'js.products.placeholder.order_by' | translate}}
+        %option(ng-repeat="c in searchOrderings" value="{{c.value}}") {{c.name}}
     .col-xs-1
-      %button.btn.btn-primary.btn-block(type="submit")
-        Sbm
+      %button.btn.btn-block.btn-primary(type='submit' ng-disabled='!filtersForm.$dirty')
+        = icon :search
+  .progress-red
+    .progress-red-value
   .gtr-b-sm(ng-repeat="product in products track by product.id" product-item)
     .box-tickets.bg-white
       .gtr-hor-sm.gtr-ver-sm

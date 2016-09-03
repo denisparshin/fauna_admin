@@ -1,6 +1,6 @@
-.#{$icomoon-prefix}-calendar { 
+.#{$icomoon-prefix}-search { 
   &:before {
-    content: $icon-calendar;
+    content: $icon-search;
   }
 }
 .#{$icomoon-prefix}-cloud-download { 
@@ -26,6 +26,11 @@
 .#{$icomoon-prefix}-close { 
   &:before {
     content: $icon-close;
+  }
+}
+.#{$icomoon-prefix}-calendar { 
+  &:before {
+    content: $icon-calendar;
   }
 }
 .#{$icomoon-prefix}-upload { 
