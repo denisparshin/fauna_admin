@@ -4,6 +4,10 @@ class Api::CatalogSerializer < ApiSerializer
     [:categories]
   end
 
+  def show
+    [:description]
+  end
+
   def categories
     serialize_objects(object.categories, Api::CategorySerializer, {scope: :index})
   end

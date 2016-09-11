@@ -6,18 +6,11 @@
     = csrf_meta_tags
     %script(type="text/javascript")
       window.anonimusUser = #{!user_signed_in?}
-  %body(ng-app="app" ng-controller="mainCtrl" ng-class="{'sidebar-close': !$root.user.id}")
+  %body(ng-app="app" class="#{cookies[:sidebar_close] ? 'sidebar-close' : ''}" ng-controller="mainCtrl")
     .main
       %header
       .tbl
-        .sidebar
-          .gtr-hor.gtr-ver.font-light
-            %a.sidebar-link(href='/#/orders') {{::"js.orders.title" | translate}}
-            //%a.sidebar-link(href='/#/catalogs') {{::"js.catalogs.title" | translate}}
-            //%a.sidebar-link(href='/#/categories') {{::"js.categories.title" | translate}}
-            %a.sidebar-link(href='/#/products') {{::"js.products.title" | translate}}
-            %a.sidebar-link(href='/#/import') {{::"js.import.title" | translate}}
-            %a.sidebar-link(href='/#/top_slider') {{::"js.top_slider.title" | translate}}
+        %sidebar(ng-if="$root.user.id")
         .tbl-cell(ng-class="alignMiddle ? 'align-middle' : 'align-top'" style="overflow: auto;")
           .tbl(ng-show="$root.waiting || !$root.ready" spinner)
           %span.content(ng-show="!$parent.waiting")

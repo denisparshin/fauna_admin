@@ -13,6 +13,15 @@ angular.module "app.core"
       .when '/products',
         templateUrl: 'products/index.html',
         controller: 'productsIndexCtrl'
+      .when '/catalogs',
+        templateUrl: 'catalogs/index.html',
+        controller: 'catalogsIndexCtrl'
+      .when '/catalogs/:id',
+        templateUrl: 'catalogs/show.html',
+        controller: 'catalogsShowCtrl'
+      .when '/catalogs/:id/categories/:categoryId',
+        templateUrl: 'catalogs/show.html',
+        controller: 'catalogsShowCtrl'
       .when '/products/:id',
         templateUrl: 'products/show.html',
         controller: 'productsShowCtrl'

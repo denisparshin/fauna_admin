@@ -12,7 +12,7 @@
   &-close-icon {
     display: none;
   }
-  &-link {
+  &-link, &-link:focus {
     display: block;
     padding: 10px $gutter / 2;
     margin: 0 -#{$gutter / 2};
@@ -22,7 +22,7 @@
     &:first-child {
       border-top: 1px solid rgb(74, 88, 103);
     }
-    &:hover, &:focus {
+    &:hover, &.active {
       color: white;
       background-color: rgba(white, 0.03);
     }

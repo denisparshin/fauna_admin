@@ -35,6 +35,9 @@ controller = ($scope, Auth, $location, $rootScope, $route) ->
       App.Alert.show "info", I18n.t("js.users.signed_out")
     ), (error) ->
 
+  $scope.$on "$routeChangeSuccess", ->
+    $rootScope.currentPath = _.compact($location.path().split("/"))[0]
+
 angular.module "app.core"
   .controller "mainCtrl", [
     "$scope"

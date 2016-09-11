@@ -10,7 +10,7 @@ class Api::CategorySerializer < ApiSerializer
   end
 
   def show
-    [:id, :name, :slug]
+    [:description, :catalog]
   end
 
 end

@@ -72,6 +72,7 @@ ru-ua:
       title: "Категории"
     catalogs:
       title: "Каталоги"
+      is_updated: "Каталог обновлен"
     pictures:
       actions:
         add: "Добавить изображение"
@@ -136,6 +137,10 @@ ru-ua:
         description: "Описание"
     info:
       something_went_wrong: "Что-то пошло не так:( Пожалуйста перезагрузите страницу"
+    attributes:
+      name: 'Имя'
+      slug: 'URL (желательно латинские буквы без пробелов). Например: Сухой корм - sukhoi_korm'
+      description: 'Описание'
     users:
       confirm_password: 'Еще раз пароль'
       email: "Email"

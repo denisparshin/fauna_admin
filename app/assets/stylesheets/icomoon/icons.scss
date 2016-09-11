@@ -1,36 +1,6 @@
-.#{$icomoon-prefix}-search { 
+.#{$icomoon-prefix}-pencil { 
   &:before {
-    content: $icon-search;
-  }
-}
-.#{$icomoon-prefix}-cloud-download { 
-  &:before {
-    content: $icon-cloud-download;
-  }
-}
-.#{$icomoon-prefix}-file-upload { 
-  &:before {
-    content: $icon-file-upload;
-  }
-}
-.#{$icomoon-prefix}-menu { 
-  &:before {
-    content: $icon-menu;
-  }
-}
-.#{$icomoon-prefix}-user { 
-  &:before {
-    content: $icon-user;
-  }
-}
-.#{$icomoon-prefix}-close { 
-  &:before {
-    content: $icon-close;
-  }
-}
-.#{$icomoon-prefix}-calendar { 
-  &:before {
-    content: $icon-calendar;
+    content: $icon-pencil;
   }
 }
 .#{$icomoon-prefix}-upload { 
@@ -96,6 +66,41 @@
 .#{$icomoon-prefix}-paper-plane { 
   &:before {
     content: $icon-paper-plane;
+  }
+}
+.#{$icomoon-prefix}-search { 
+  &:before {
+    content: $icon-search;
+  }
+}
+.#{$icomoon-prefix}-cloud-download { 
+  &:before {
+    content: $icon-cloud-download;
+  }
+}
+.#{$icomoon-prefix}-file-upload { 
+  &:before {
+    content: $icon-file-upload;
+  }
+}
+.#{$icomoon-prefix}-menu { 
+  &:before {
+    content: $icon-menu;
+  }
+}
+.#{$icomoon-prefix}-user { 
+  &:before {
+    content: $icon-user;
+  }
+}
+.#{$icomoon-prefix}-close { 
+  &:before {
+    content: $icon-close;
+  }
+}
+.#{$icomoon-prefix}-calendar { 
+  &:before {
+    content: $icon-calendar;
   }
 }
 .#{$icomoon-prefix}-l-angle-up { 

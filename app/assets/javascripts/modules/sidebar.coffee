@@ -1,3 +1,3 @@
 @module "App.Sidebar", ->
   @toggle = ->
-    $("body").toggleClass("sidebar-close")
+    App.Cookies.createCookie "sidebar_close", 1, if $("body").toggleClass("sidebar-close").hasClass("sidebar-close") then 32 else -32

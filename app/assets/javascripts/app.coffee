@@ -1,6 +1,7 @@
 //= require ./core/core
 //= require ./auth/auth
 //= require ./products/products
+//= require ./catalogs/catalogs
 //= require ./shared/shared
 //= require ./import/import
 //= require ./orders/orders
@@ -27,6 +28,7 @@ angular.module "app", [
   "app.core"
   "app.auth"
   "app.products"
+  "app.catalogs"
   "app.shared"
   "app.import"
   "app.orders"
