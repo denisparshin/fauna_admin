@@ -15,7 +15,7 @@ class Product < ActiveRecord::Base
 
   scope :by_keyword, -> (keyword){
     joins(:sub_products).where(search_string(
-      ["products.name", "products.description", "sub_products.name", "sub_products.description"], keyword
+      ["products.name", "products.description", "sub_products.name", "sub_products.description", "sub_products.sku"], keyword
     )).uniq if keyword
   }
 

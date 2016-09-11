@@ -67,6 +67,7 @@ ru-ua:
       search: 'Поиск'
       status: 'Статус'
       submit: "Отправить"
+      apply: "Применить"
     categories:
       title: "Категории"
     catalogs:
@@ -110,9 +111,9 @@ ru-ua:
         - name: "От Я до А"
           value: "name-desc"
         - name: "Последние добавленные"
-          value: "created_at-asc"
-        - name: "Первые добавленные"
           value: "created_at-desc"
+        - name: "Первые добавленные"
+          value: "created_at-asc"
       title: "Товары"
       successfully_removed: "Товар был успешно удален"
       actions:
@@ -152,4 +153,5 @@ ru-ua:
       signed_out: "Успешно вышли"
       signed_up: "Регистрация успешна"
       profile_updated: "Ваш профиль был обновлен"
-
+    info:
+      nothing_found: "Ничего не найдено :("

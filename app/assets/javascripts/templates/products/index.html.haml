@@ -1,27 +1,41 @@
 .clearfix
   //%products-index-filters
-  %form.text-line.row(name="filtersForm" ng-submit="submitSearch()")
-    %input.hidden(type="submit")
-    .col-xs-2
-      %select.form-control(ng-model="search.catalog_id")
-        %option(value='') {{::'js.products.placeholder.catalog_id' | translate}}
-        %option(ng-repeat="c in catalogs" value="{{c.id}}") {{c.name}}
-    .col-xs-3
-      %select.form-control(ng-model="search.category_id")
-        %option(value='') {{::'js.products.placeholder.category_id' | translate}}
-        %option(ng-repeat="c in getCategories()" value="{{c.id}}") {{c.name}}
-    .col-xs-3
-      .form-search
-        %input.form-control(placeholder="{{::'js.products.placeholder.keyword' | translate}}")
-    .col-xs-3
-      %select.form-control(ng-model="search.order_by")
-        %option(value='') {{::'js.products.placeholder.order_by' | translate}}
-        %option(ng-repeat="c in searchOrderings" value="{{c.value}}") {{c.name}}
-    .col-xs-1
-      %button.btn.btn-block.btn-primary(type='submit' ng-disabled='!filtersForm.$dirty')
-        = icon :search
-  .progress-red
-    .progress-red-value
+
+  %form.text-row(name="filtersForm" ng-submit="submitSearch()")
+    .box-tickets.bg-white.gtr-hor.gtr-t
+      .row.text-line
+        .col-xs-3
+          %label.form-label
+            .form-label-text {{::'js.products.placeholder.catalog_id' | translate}}
+            %select.form-control(ng-model="search.catalog_id")
+              %option(value='') {{::'js.products.placeholder.catalog_id' | translate}}
+              %option(ng-repeat="c in catalogs" value="{{c.id}}") {{c.name}}
+        .col-xs-3
+          %label.form-label
+            .form-label-text {{::'js.products.placeholder.category_id' | translate}}
+            %select.form-control(ng-model="search.category_id")
+              %option(value='') {{::'js.products.placeholder.category_id' | translate}}
+              %option(ng-repeat="c in getCategories()" value="{{c.id}}") {{c.name}}
+        .col-xs-3
+          %label.form-label
+            .form-label-text {{::'js.products.placeholder.keyword' | translate}}
+            .form-search
+              %input.form-control(ng-model="search.keyword")
+        .col-xs-3
+          %label.form-label
+            .form-label-text {{::'js.products.placeholder.order_by' | translate}}
+            %select.form-control(ng-model="search.order_by")
+              %option(value='') {{::'js.products.placeholder.order_by' | translate}}
+              %option(ng-repeat="c in searchOrderings" value="{{c.value}}") {{c.name}}
+      .row.text-line(ng-show="filtersForm.$dirty")
+        .col-xs-12
+          %button.btn.btn-default.btn-block(type='submit')
+            {{::"js.helpers.apply" | translate}}
+
+  .clearfix(ng-if="products && !products.length")
+    .alert.alert-info.clearfix
+      .alert-container
+        {{::"js.info.nothing_found" | translate}}
   .gtr-b-sm(ng-repeat="product in products track by product.id" product-item)
     .box-tickets.bg-white
       .gtr-hor-sm.gtr-ver-sm
