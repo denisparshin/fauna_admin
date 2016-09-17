@@ -15,5 +15,5 @@
     %label.form-label
       .row-b-sm
         .form-label-text {{::"js.products.attributes.description" | translate}}
-    %summernote(ng-model="product.description")
+    %summernote(ng-model="product.description" on-image-upload="imageUpload(files)" editor="editor")
     %button.btn.btn-primary(type="submit" ng-disabled="!productForm.$valid") {{::"js.helpers.submit" | translate}}
