@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :sub_products
     resources :pictures
+    resources :payment_methods
     resources :filter_groups
     resources :filter_values
     resources :orders

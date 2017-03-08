@@ -39,4 +39,7 @@ angular.module "app.core"
         controller: 'ordersIndexCtrl'
       .otherwise
         redirectTo: '/'
+      .when '/payment_methods',
+        templateUrl: 'payment_methods/index.html',
+        controller: 'paymentMethodIndexCtrl',
   ]

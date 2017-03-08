@@ -3,7 +3,7 @@ class Api::OrderSerializer < ApiSerializer
   attributes :id
 
   def index
-    [:name, :email, :last_name, :phone, :address, :comment, :data, :status, :created_at, :discount, :summ, :number, :shipping_method, :payment_method]
+    [:name, :email, :last_name, :phone, :address, :city, :comment, :data, :status, :created_at, :discount, :summ, :number, :shipping_method, :payment_method]
   end
 
   def update

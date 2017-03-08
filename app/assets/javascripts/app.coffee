@@ -6,6 +6,8 @@
 //= require ./import/import
 //= require ./orders/orders
 //= require ./top_slider/top_slider
+//= require ./payment_methods/payment_methods
+
 
 angular.module "app", [
   "ngRoute"
@@ -33,6 +35,10 @@ angular.module "app", [
   "app.import"
   "app.orders"
   "app.top_slider"
+  "app.payment_methods"
+
+
+
 ]
 
 I18n.defaultLocale = "ru-ua"
